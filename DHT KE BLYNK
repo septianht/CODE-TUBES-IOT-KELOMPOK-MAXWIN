@@ -1,7 +1,7 @@
 /* Comment this out to disable prints and save space */
 #define BLYNK_TEMPLATE_ID "TMPL6HPfSuD7C"
 #define BLYNK_TEMPLATE_NAME "Monitoring Suhu dan Kelembapan"
-#define BLYNK_AUTH_TOKEN "1ooxWzJqmoZpzjzY4qEtWmepPGqBs5H5"
+#define BLYNK_AUTH_TOKEN "6Sk9WMIqQEbU9ms-ws6iRCXoTr36ewtG"
 
 #define BLYNK_PRINT Serial
 
