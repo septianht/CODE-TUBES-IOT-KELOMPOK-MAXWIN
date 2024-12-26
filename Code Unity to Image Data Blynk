@@ -6,15 +6,15 @@ using Vuforia;
 
 public class click : MonoBehaviour
 {
-    InputField field;
+    InputField Temp;
     InputField Hum;
     public VirtualButtonBehaviour Vb_on;
  
     void Start()
     {
-        field = GameObject.Find("TextInputField").GetComponent<InputField>();
+        Temp = GameObject.Find("InputFieldTemp").GetComponent<InputFieldTemp>();
         
-        Hum = GameObject.Find("InputField1").GetComponent<InputField>();
+        Hum = GameObject.Find("InputFieldHum").GetComponent<InputFieldHum>();
 
         Vb_on.RegisterOnButtonPressed(OnButtonPressed_on);
         // GameObject.Find("GetButton").GetComponent<Button>().onClick.AddListener(GetData);
@@ -22,19 +22,19 @@ public class click : MonoBehaviour
 
     public void OnButtonPressed_on(VirtualButtonBehaviour Vb_on)
     {
-        GetData_tem();
+        GetData_temp();
         GetData_hum();
-        Debug.Log("Click");
+        //Debug.Log("Click");
     }
  
-    void GetData_tem() => StartCoroutine(GetData_Coroutine1());
+    void GetData_temp() => StartCoroutine(GetData_Coroutine1());
     void GetData_hum() => StartCoroutine(GetData_Coroutine());
  
     IEnumerator GetData_Coroutine1()
     {
         Debug.Log("Getting Data");
         field.text = "Loading...";
-        string uri = "hhttp://blynk-cloud.com/6Sk9WMIqQEbU9ms-ws6iRCXoTr36ewtG/get/v0";
+        string uri = "http://blynk-cloud.com/6Sk9WMIqQEbU9ms-ws6iRCXoTr36ewtG/get/v0";
         using(UnityWebRequest request = UnityWebRequest.Get(uri))
         {
             yield return request.SendWebRequest();
