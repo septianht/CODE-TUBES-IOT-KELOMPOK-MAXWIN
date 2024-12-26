@@ -34,7 +34,7 @@ public class click : MonoBehaviour
     {
         Debug.Log("Getting Data");
         field.text = "Loading...";
-        string uri = "http://blynk-cloud.com/vKqIp55UdG2GoZcvY3un4sPyQpoxgnG3/get/v0";
+        string uri = "hhttp://blynk-cloud.com/6Sk9WMIqQEbU9ms-ws6iRCXoTr36ewtG/get/v0";
         using(UnityWebRequest request = UnityWebRequest.Get(uri))
         {
             yield return request.SendWebRequest();
@@ -52,7 +52,7 @@ public class click : MonoBehaviour
     {
         Debug.Log("Getting Data");
         Hum.text = "Loading...";
-        string uri = "http://blynk-cloud.com/vKqIp55UdG2GoZcvY3un4sPyQpoxgnG3/get/v1";
+        string uri = "http://blynk-cloud.com/6Sk9WMIqQEbU9ms-ws6iRCXoTr36ewtG/get/v1";
         using(UnityWebRequest request = UnityWebRequest.Get(uri))
         {
             yield return request.SendWebRequest();
